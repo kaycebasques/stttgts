@@ -1,12 +1,19 @@
-from gpiozero import LED
-from time import sleep
+import threading
+import time
 
-# The number maps to "GPIO 17" in the URL below, not the number in the circle.
-# https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
-led = LED(17)
+import gpiozero
 
-while True:
-    led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
+def blink():
+    # The number maps to "GPIO 17" in the URL below, not the number in the circle.
+    # https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
+    led = gpiozero.LED(17)
+    while True:
+        led.on()
+        time.sleep(1)
+        led.off()
+        time.sleep(1)
+
+thread = threading.Thread(target=blink)
+thread.start()
+input('Press Enter to stop...')
+thread.join()
