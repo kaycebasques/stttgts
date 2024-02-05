@@ -12,4 +12,5 @@ Raspberry Pi stuff
 * [HC-SR04](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
   * The one from the SIK and PiSloth are both HC-SR04
 * [Robot Hat](https://github.com/sunfounder/robot-hat)
-* [PiSloth](https://github.com/sunfounder/pisloth)
+* [PiSloth](https://github.com/sunfounder/pisloth/tree/v2.0)
+  * Make sure to look at v2 branch
