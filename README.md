@@ -14,3 +14,4 @@ Raspberry Pi stuff
 * [Robot Hat](https://github.com/sunfounder/robot-hat)
 * [PiSloth](https://github.com/sunfounder/pisloth/tree/v2.0)
   * Make sure to look at v2 branch
+* [VNC](https://www.raspberrypi.com/documentation/computers/remote-access.html#enable-the-vnc-server-on-the-command-line)
