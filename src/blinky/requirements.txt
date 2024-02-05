@@ -1,1 +1,2 @@
 gpiozero==2.0
+RPi.GPIO==0.7.1
