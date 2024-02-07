@@ -25,3 +25,4 @@ while True:
     button.wait_for_release()
     stop.set()
     thread.join()
+    subprocess.run(['play', '-v', '3.0', audio_file])
