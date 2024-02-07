@@ -16,6 +16,14 @@ Raspberry Pi stuff
   * Make sure to look at v2 branch
 * [VNC](https://www.raspberrypi.com/documentation/computers/remote-access.html#enable-the-vnc-server-on-the-command-line)
 
+## Record and immediate playback
+
+```
+arecord -f cd - | tee rec.wav | aplay -
+```
+
+https://superuser.com/a/1711740
+
 ## VNC
 
 sudo raspi-config
