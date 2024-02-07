@@ -1,0 +1,433 @@
+The following examples show various ways lg may be used to communicate with sensors via the GPIO.
+
+Although many are complete programs they are intended to be a starting point in producing your own code, not an end point.
+
+?0|Index
+
+?0|C lgpio
+
+?0|Python lgpio
+
+?0|C rgpio
+
+?0|Python rgpio
+
+?0|rgs shell
+
+?1|lgpio|C lgpio
+
+Examples of C lgpio programs.
+
+C lgpio programs may be run on any Linux computer.  The programs allow control of the local GPIO.
+
+If your program is called foobar.c then build with
+
+gcc -Wall -o foobar foobar.c -llgpio
+
+
+?4|28BYJ_48.c|2020-11-21|28BYJ_48
+Simple code to spin a 28BYJ_48 stepper clockwise then counterclockwise.
+
+./28BYJ_48 [chip] gpio1 gpio2 gpio3 gpio4
+
+?4|bench.c|2020-11-18|GPIO Toggle
+A crude benchmark of how many toggles a second can be completed.
+
+?4|chipline.c|2020-11-18|gpiochip Info
+Prints gpiochip information and line information for each GPIO.
+
+?4|dhtxx.c|2020-11-18|DHT11/22/XX
+Reads the DHT series of temperature and humidity sensors.  The sensor type is autodetected.
+
+?4|lg_ads1x15.h|2021-01-17|ADS1x15 ADC (.h)
+ADS1x15 header file.
+
+?4|lgl_ads1x15.c|2021-01-17|ADS1x15 ADC
+ADS1015 (12-bit) and ADS1115 (16-bit) ADC functions.  The ALERT/RDY
+pin is fully supported.
+
+?4|lg_mcp3008.h|2021-01-17|MCP3008 ADC (.h)
+MCP3008 header file.
+
+?4|lgl_mcp3008.c|2021-01-17|MCP3008 ADC
+MCP3008 ADC functions.
+
+?4|lg_mcp3202.h|2021-01-17|MCP3202 ADC (.h)
+MCP3202 header file.
+
+?4|lgl_mcp3202.c|2021-01-17|MCP3202 ADC
+MCP3202 ADC functions.
+
+?4|lg_mcp4131.h|2021-01-17|MCP4131 Digital Pot (.h)
+MCP4131 header file.
+
+?4|lgl_mcp4131.c|2021-01-17|MCP4131 Digital Pot
+MCP4131 digital pot functions.
+
+?4|monitor.c|2020-11-20|Monitor GPIO
+Monitors one or more GPIO as specified on the command line.
+
+./monitor [chip:]gpio ...
+
+chip specifies a gpiochip number.  gpio is a GPIO in the previous gpiochip (gpiochip0 if there is no previous gpiochip).
+
+e.g.
+
+./monitor 23 24 25 # chip0: 23,24,25
+./monitor 0:23 1:0 5 # chip0: 23, chip1: 0,5
+
+?4|NRF24.c|2020-12-30|NRF24 Radio Transceiver
+Script to transmit and receive messages using the nRF24L01 radio transceiver.
+
+?4|rotary_encoder.c|2020-11-20|Rotary Encoder
+Code to monitor a rotary encoder and show the detent changes.
+
+./rotary_encoder [chip] gpioA gpioB
+
+E.g.
+
+./rotary_encoder 20 21 # gpiochip 0, gpioA 20, gpioB 21
+
+./rotary_encoder 2 7 5 # gpiochip 2, gpioA 7, gpioB 5
+
+?4|sonar_ranger.c|2020-11-20|Sonar Ranger
+Code to find the distance between a sonar ranger and the nearest object.  The code assumes the sonar ranger is the type with separate trigger and echo lines.
+
+./sonar_ranger [chip] trigger echo
+
+E.g.
+
+./sonar_ranger 20 21 # gpiochip 0, trigger 20, echo 21
+
+./sonar_ranger 2 7 5 # gpiochip 2, trigger 7, echo 5
+
+?4|tx_pulse.c|2020-11-18|Tx Pulse
+Demonstrates usage of the tx pulse function.
+
+?4|tx_wave.c|2020-11-18|Tx Wave
+Demonstrates usage of the tx wave function.
+
+
+?1|py_lgpio|Python lgpio
+
+Examples of Python lgpio module scripts.
+
+lgpio Python scripts may be run on any Linux computer with Python installed.  The scripts allow control of the local GPIO.
+
+
+?4|28BYJ_48.py|2020-11-21|28BYJ_48
+Simple code to spin a 28BYJ_48 stepper clockwise then counterclockwise.
+
+./28BYJ_48.py [chip] gpio1 gpio2 gpio3 gpio4
+
+?4|bench.py|2020-11-18|GPIO Toggle
+A crude benchmark of how many toggles a second can be completed.
+
+?4|chipline.py|2020-11-18|gpiochip Info
+Prints gpiochip information and line information for each GPIO.
+
+?4|DHT.py|2020-12-01|DHT11/22/XX
+Reads the DHT series of temperature and humidity sensors.  The sensor type is autodetected.
+
+?4|errors.py|2020-11-18|Errors
+Checks that the correct errors are reported when erroneous parameters are used.  The checks are limited in scope to those that can be detected without having any hardware connected.
+
+?4|lg_ads1x15.py|2021-01-17|ADS1x15 ADC
+ADS1015 (12-bit) and ADS1115 (16-bit) ADC functions.  The ALERT/RDY
+pin is fully supported.
+
+?4|lg_mcp3008.py|2021-01-17|MCP3008 ADC
+MCP3008 ADC functions.
+
+?4|lg_mcp3202.py|2021-01-17|MCP3202 ADC
+MCP3202 ADC functions.
+
+?4|lg_mcp4131.py|2021-01-17|MCP4131 Digital Pot
+MCP4131 digital pot functions.
+
+?4|monitor.py|2021-01-11|Monitor GPIO
+Monitors one or more GPIO as specified on the command line.
+
+./monitor.py [chip:]gpio ...
+
+chip specifies a gpiochip number.  gpio is a GPIO in the previous gpiochip (gpiochip0 if there is no previous gpiochip).
+
+e.g.
+
+./monitor.py 23 24 25 # chip0: 23,24,25
+./monitor.py 0:23 1:0 5 # chip0: 23, chip1: 0,5
+
+?4|motor_sync.py|2020-11-30|Motor Sync
+A class to send synchronised outputs to output devices. Unipolar steppers and servos are specifically supported. PWM is supported. An adhoc method allows for setting the levels of one or more GPIO at set times.
+
+The following steps are required.
+
+1. sync = motor_sync.sync(sbc)
+2. call one or more setup_() functions to define the devices and the GPIO to use.
+3. call setup_complete() when all devices have been allocated.
+4. add waypoints for each device to be moved in the next period.
+5. call batch() to start transmission.
+6. wait until batching() is False (all movements calculated).
+7. If more movements are desired repeat from step 4.
+8. wait till busy() is False (all movements completed).
+9. call finish() to release resources.
+
+?4|NRF24.py|2020-12-22|NRF24 Radio Transceiver
+Script to transmit and receive messages using the nRF24L01 radio transceiver.
+
+?4|rotary_encoder.py|2020-11-18|Rotary Encoder
+Code to monitor a rotary encoder and show the detent changes.
+
+./rotary_encoder.py [chip] gpioA gpioB
+
+E.g.
+
+./rotary_encoder.py 20 21 # gpiochip 0, gpioA 20, gpioB 21
+
+./rotary_encoder.py 2 7 5 # gpiochip 2, gpioA 7, gpioB 5
+
+?4|sonar_ranger.py|2020-11-20|Sonar Ranger
+Code to find the distance between a sonar ranger and the nearest object.  The code assumes the sonar ranger is the type with separate trigger and echo lines.
+
+./sonar_ranger.py [chip] trigger echo
+
+E.g.
+
+./sonar_ranger.py 20 21 # gpiochip 0, trigger 20, echo 21
+
+./sonar_ranger.py 2 7 5 # gpiochip 2, trigger 7, echo 5
+
+?4|testbed.py|2020-12-31|Testbed
+Exercises SPI, I2C, and serial links with miscellaneous hardware.
+
+?4|tx_pulse.py|2020-11-18|Tx Pulse
+Demonstrates usage of the tx pulse function.
+
+?4|tx_wave.py|2020-11-18|Tx Wave
+Demonstrates usage of the tx wave function.
+
+
+?1|rgpio|C rgpio
+
+Examples of C rgpio programs.
+
+C rgpio programs may be run on any Linux computer.  The programs allow control of the GPIO on one or more networked Linux SBCs.
+
+Each SBC needs the rgpiod daemon to be running.  The rgpiod daemon may be started with the command rgpiod &.
+
+If your program is called foobar.c then build with
+
+gcc -Wall -o foobar foobar.c -lrgpio
+
+
+?4|28BYJ_48.c|2020-11-21|28BYJ_48
+Simple code to spin a 28BYJ_48 stepper clockwise then counterclockwise.
+
+./28BYJ_48 [chip] gpio1 gpio2 gpio3 gpio4
+
+?4|bench.c|2020-11-18|GPIO Toggle
+A crude benchmark of how many toggles a second can be completed.
+
+?4|chipline.c|2020-11-18|gpiochip Info
+Prints gpiochip information and line information for each GPIO.
+
+?4|dhtxxd.c|2020-11-18|DHT11/22/XX
+Reads the DHT series of temperature and humidity sensors.  The sensor type is autodetected.
+
+?4|DS18B20.c|2020-11-18|DS18B20
+Reads any DS18B20 temperature sensors connected to the 1-wire bus.  It demonstrates the remote file read abilities of the daemon.
+
+?4|errors.c|2020-11-18|Errors
+Checks that the correct errors are reported when erroneous parameters are used.  The checks are limited in scope to those that can be detected without having any hardware connected.
+
+?4|files.c|2020-11-18|Files
+Demonstrates usage of the remote file handling features of the daemon.
+
+?4|lg_ads1x15.h|2021-01-17|ADS1x15 ADC (.h)
+ADS1x15 header file.
+
+?4|lgr_ads1x15.c|2021-01-17|ADS1x15 ADC
+ADS1015 (12-bit) and ADS1115 (16-bit) ADC functions.  The ALERT/RDY
+pin is fully supported.
+
+?4|lg_mcp3008.h|2021-01-17|MCP3008 ADC (.h)
+MCP3008 header file.
+
+?4|lgr_mcp3008.c|2021-01-17|MCP3008 ADC
+MCP3008 ADC functions.
+
+?4|lg_mcp3202.h|2021-01-17|MCP3202 ADC (.h)
+MCP3202 header file.
+
+?4|lgr_mcp3202.c|2021-01-17|MCP3202 ADC
+MCP3202 ADC functions.
+
+?4|lg_mcp4131.h|2021-01-17|MCP4131 Digital Pot (.h)
+MCP4131 header file.
+
+?4|lgr_mcp4131.c|2021-01-17|MCP4131 Digital Pot
+MCP4131 digital pot functions.
+
+?4|monitor.c|2020-11-18|Monitor GPIO
+Monitors one or more GPIO as specified on the command line.
+
+./monitor [chip:]gpio ...
+
+chip specifies a gpiochip number.  gpio is a GPIO in the previous gpiochip (gpiochip0 if there is no previous gpiochip).
+
+e.g.
+
+./monitor 23 24 25 # chip0: 23,24,25
+./monitor 0:23 1:0 5 # chip0: 23, chip1: 0,5
+
+?4|NRF24.c|2020-12-30|NRF24 Radio Transceiver
+Script to transmit and receive messages using the nRF24L01 radio transceiver.
+
+?4|rotary_encoder.c|2020-11-18|Rotary Encoder
+Code to monitor a rotary encoder and show the detent changes.
+
+./rotary_encoder [chip] gpioA gpioB
+
+E.g.
+
+./rotary_encoder 20 21 # gpiochip 0, gpioA 20, gpioB 21
+
+./rotary_encoder 2 7 5 # gpiochip 2, gpioA 7, gpioB 5
+
+?4|sonar_ranger.c|2020-11-20|Sonar Ranger
+Code to find the distance between a sonar ranger and the nearest object.  The code assumes the sonar ranger is the type with separate trigger and echo lines.
+
+./sonar_ranger [chip] trigger echo
+
+E.g.
+
+./sonar_ranger 20 21 # gpiochip 0, trigger 20, echo 21
+
+./sonar_ranger 2 7 5 # gpiochip 2, trigger 7, echo 5
+
+?4|tx_pulse.c|2020-11-18|Tx Pulse
+Demonstrates usage of the tx pulse function.
+
+?4|tx_wave.c|2020-11-18|Tx Wave
+Demonstrates usage of the tx wave function.
+
+
+?1|py_rgpio|Python rgpio
+
+Examples of Python rgpio module scripts.
+
+The rgpio Python module may be run on any computer with Python installed. The scripts allow control of the GPIO on one or more networked Linux SBCs.
+
+The computer need not be Linux, it may run Windows, Mac, etc, anything as long as it supports Python.
+
+Each SBC needs the rgpiod daemon to be running.  The rgpiod daemon may be started with the command rgpiod &.
+
+
+?4|28BYJ_48.py|2020-11-21|28BYJ_48
+Simple code to spin a 28BYJ_48 stepper clockwise then counterclockwise.
+
+./28BYJ_48.py [chip] gpio1 gpio2 gpio3 gpio4
+
+?4|bench.py|2020-11-18|GPIO Toggle
+A crude benchmark of how many toggles a second can be completed.
+
+?4|chipline.py|2020-11-18|gpiochip Info
+Prints gpiochip information and line information for each GPIO.
+
+?4|DHT.py|2020-11-18|DHT11/22/XX
+Reads the DHT series of temperature and humidity sensors.  The sensor type is autodetected.
+
+?4|DS18B20.py|2020-11-18|DS18B20
+Reads any DS18B20 temperature sensors connected to the 1-wire bus.  It demonstrates the remote file read abilities of the daemon.
+
+?4|errors.py|2020-11-18|Errors
+Checks that the correct errors are reported when erroneous parameters are used.  The checks are limited in scope to those that can be detected without having any hardware connected.
+
+?4|files.py|2020-11-18|Files
+Demonstrates usage of the remote file handling features of the daemon.
+
+?4|lg_ads1x15.py|2021-01-17|ADS1x15 ADC
+ADS1015 (12-bit) and ADS1115 (16-bit) ADC functions.  The ALERT/RDY
+pin is fully supported.
+
+?4|lg_mcp3008.py|2021-01-17|MCP3008 ADC
+MCP3008 ADC functions.
+
+?4|lg_mcp3202.py|2021-01-17|MCP3202 ADC
+MCP3202 ADC functions.
+
+?4|lg_mcp4131.py|2021-01-17|MCP4131 Digital Pot
+MCP4131 digital pot functions.
+
+?4|monitor.py|2021-01-11|Monitor GPIO
+Monitors one or more GPIO as specified on the command line.
+
+./monitor.py [chip:]gpio ...
+
+chip specifies a gpiochip number.  gpio is a GPIO in the previous gpiochip (gpiochip0 if there is no previous gpiochip).
+
+e.g.
+
+./monitor.py 23 24 25 # chip0: 23,24,25
+./monitor.py 0:23 1:0 5 # chip0: 23, chip1: 0,5
+
+?4|motor_sync.py|2020-11-30|Motor Sync
+A class to send synchronised outputs to output devices. Unipolar steppers and servos are specifically supported. PWM is supported. An adhoc method allows for setting the levels of one or more GPIO at set times.
+
+The following steps are required.
+
+1. sync = motor_sync.sync(sbc)
+2. call one or more setup_() functions to define the devices and the GPIO to use.
+3. call setup_complete() when all devices have been allocated.
+4. add waypoints for each device to be moved in the next period.
+5. call batch() to start transmission.
+6. wait until batching() is False (all movements calculated).
+7. If more movements are desired repeat from step 4.
+8. wait till busy() is False (all movements completed).
+9. call finish() to release resources.
+
+?4|NRF24.py|2020-12-22|NRF24 Radio Transceiver
+Script to transmit and receive messages using the nRF24L01 radio transceiver.
+
+?4|rotary_encoder.py|2020-11-18|Rotary Encoder
+Code to monitor a rotary encoder and show the detent changes.
+
+./rotary_encoder.py [chip] gpioA gpioB
+
+E.g.
+
+./rotary_encoder.py 20 21 # gpiochip 0, gpioA 20, gpioB 21
+
+./rotary_encoder.py 2 7 5 # gpiochip 2, gpioA 7, gpioB 5
+
+?4|sonar_ranger.py|2020-11-20|Sonar Ranger
+Code to find the distance between a sonar ranger and the nearest object.  The code assumes the sonar ranger is the type with separate trigger and echo lines.
+
+./sonar_ranger.py [chip] trigger echo
+
+E.g.
+
+./sonar_ranger.py 20 21 # gpiochip 0, trigger 20, echo 21
+
+./sonar_ranger.py 2 7 5 # gpiochip 2, trigger 7, echo 5
+
+?4|testbed.py|2020-12-31|Testbed
+Exercises SPI, I2C, and serial links with miscellaneous hardware.
+
+?4|tx_pulse.py|2020-11-18|Tx Pulse
+Demonstrates usage of the tx pulse function.
+
+?4|tx_wave.py|2020-11-18|Tx Wave
+Demonstrates usage of the tx wave function.
+
+
+
+?1|rgs|rgs command line
+
+?4|chipline.rgs|2021-01-03|gpiochip Info
+Prints gpiochip information and line information for each GPIO.
+
+
+
+?1|Index|Index
+

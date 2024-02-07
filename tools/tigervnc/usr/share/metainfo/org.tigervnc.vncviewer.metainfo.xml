@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.tigervnc.vncviewer</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <name>TigerVNC Viewer</name>
+  <name xml:lang="bg">Визуализатор на TigerVNC</name>
+  <name xml:lang="cs">Prohlížeč TigerVNC</name>
+  <name xml:lang="da">TigerVNC-fremviser</name>
+  <name xml:lang="de">TigerVNC-Betrachter</name>
+  <name xml:lang="el">Θεατής TigerVNC</name>
+  <name xml:lang="eo">Rigardilo TigerVNC</name>
+  <name xml:lang="es">Visor TigerVNC</name>
+  <name xml:lang="fi">TigerVNC-katselin</name>
+  <name xml:lang="fr">Visionneuse TigerVNC</name>
+  <name xml:lang="fur">Visualizadôr TigerVNC</name>
+  <name xml:lang="he">המציג TigerVNC</name>
+  <name xml:lang="hu">TigerVNC megjelenítő</name>
+  <name xml:lang="id">Penampil TigerVNC</name>
+  <name xml:lang="ka">TigerVNC-ის კლიენტი</name>
+  <name xml:lang="ko">TigerVNC 뷰어</name>
+  <name xml:lang="nl">TigerVNC-viewer</name>
+  <name xml:lang="pt_BR">Visualizador TigerVNC</name>
+  <name xml:lang="ro">Vizualizator TigerVNC</name>
+  <name xml:lang="ru">TigerVNC Viewer</name>
+  <name xml:lang="sr">Прегледач ТигарВНЦ</name>
+  <name xml:lang="sv">VNC-visare</name>
+  <name xml:lang="tr">TigerVNC Görüntüleyici</name>
+  <name xml:lang="uk">Засіб перегляду TigerVNC</name>
+  <name xml:lang="vi">Bộ xem TigerVNC</name>
+  <name xml:lang="zh_CN">TigerVNC 查看器</name>
+  <name xml:lang="zh_TW">TigerVNC 檢視器</name>
+  <summary>Connect to VNC server and display remote desktop</summary>
+  <summary xml:lang="bg">Свързване към сървър за VNC и визуализация на отдалечено работно място</summary>
+  <summary xml:lang="cs">Připojí se k severu VNC a zobrazí vzdálenou plochu</summary>
+  <summary xml:lang="da">Forbind til VNC-server og vis eksternt skrivebord</summary>
+  <summary xml:lang="de">Mite einem VNC-Server verbinden und einen fernen Desktop anzeigen</summary>
+  <summary xml:lang="el">Σύνδεση σε ένα εξυπηρετητή VNC και εμφάνιση του απομακρυσμένου επιφάνειας εργασίας</summary>
+  <summary xml:lang="eo">Konekti al servilo VNC kaj montrigi deforan labortablon</summary>
+  <summary xml:lang="es">Conecta al servidor VNC y muestra el escritorio remoto</summary>
+  <summary xml:lang="fi">Yhdistä VNC-palvelimeen ja näytä etätyöpöytä</summary>
+  <summary xml:lang="fr">Se connecter à un serveur VNC et afficher le bureau à distance</summary>
+  <summary xml:lang="fur">Conet a un servidôr VNC e visualize il scritori lontan</summary>
+  <summary xml:lang="he">התחברות לשרת VNC והצגת שולחן עבודה מרוחק</summary>
+  <summary xml:lang="hu">Kapcsolódás VNC-kiszolgálóhoz és távoli asztal megjelenítése</summary>
+  <summary xml:lang="id">Sambungkan ke server VNC dan tampilkan desktop jarak jauh</summary>
+  <summary xml:lang="ko">VNC 서버와 연결하고 원격 데스크톱을 보입니다</summary>
+  <summary xml:lang="pt_BR">Conecte a um servidor VNC e exiba a área de trabalho remota</summary>
+  <summary xml:lang="ro">Se conectează la serverul VNC și afișează biroul de la distanță</summary>
+  <summary xml:lang="ru">Подключиться к серверу VNC и показать удалённый рабочий стол</summary>
+  <summary xml:lang="sr">Повежите се на ВНЦ сервер и прикажите удаљену радну површ</summary>
+  <summary xml:lang="sv">Anslut till en VNC-server och visa ett fjärrskrivbord</summary>
+  <summary xml:lang="uk">З'єднання із сервером VNC і показ віддаленої стільниці</summary>
+  <summary xml:lang="vi">Kết nối đến máy phục vụ VNC và hiển thị màn hình từ xa</summary>
+  <summary xml:lang="zh_TW">連線到 VNC 伺服器並顯示遠端桌面</summary>
+  <content_rating type="oars-1.1"/>
+  <description>
+    <p>Virtual Network Computing (VNC) is a remote display system that allows you to view and interact with a virtual desktop environment running on another computer on the network. Using VNC, you can run graphical applications on a remote machine and send only the display from these applications to your local device. This package contains a client which will enable you to connect to other desktops running a VNC server. VNC is platform-independent and supports various operating systems and architectures as both servers and clients.</p>
+    <p xml:lang="bg">Virtual Network Computing (VNC — виртуални компютри по мрежата) е система за отдалечена визуализация, която позволява да работите с виртуална работна среда, която е стартирана на друг компютър в мрежата. С VNC може да стартирате графични приложения на отдалечени машини, а да ги визуализирате на собственото си устройство. Пакетът съдържа клиент, с който може да се свържете към отдалечени работни среди, които ползват сървър за VNC. Самата система VNC е платформено независима и поддържа различни операционни системи и хардуерни архитектури както за сървъри, така и за клиенти.</p>
+    <p xml:lang="cs">Virtual Network Computing (VNC) je systém vzdáleného displeje, který umožňuje přes síť zobrazit a ovládat virtuální desktopové prostředí běžící na jiném počítači. Pomocí VNC můžete spouštět grafické aplikace na vzdáleném stroji a poslat výstup těchto aplikací na vaše místní zařízení. Tento balík obsahuje klient, který umožňuje se připojit na jiné desktopové prostředí provozující VNC server. VNC je platformě nezávislé a podporuje celou řadu operačních systémů a architektur, jak na straně serveru, tak na straně klientu.</p>
+    <p xml:lang="de">Virtual Network Computing (VNC) ist ein Anzeigesystem für ferne Rechner, dass es Ihnen ermöglicht, eine Arbeitsumgebung auf einem anderen Rechner im Netzwerk zu betrachten und damit zu interagieren. Mit VNC können Sie auf dem fernen Rechner grafische Anwendungen ausführen und lediglich die Anzeige dieser Anwendungen auf Ihr lokales Gerät holen. Dieses Paket enthält einen Client, mit dem Sie sich mit über einen laufenden VNC-Server mit anderen Arbeitsumgebungen verbinden können. VNC ist plattformunabhängig und unterstützt verschiedene Betriebssysteme und Architekturen als sowohl Server als auch Client.</p>
+    <p xml:lang="es">Cómputo de Red Virtual (VNC, por sus siglas en inglés) es un sistema de despliegue remoto que le permite ver e interactuar con un ambiente de escritorio virtual ejecutándose en otra computadora en la red. Al usar VNC, puede ejecutar aplicaciones gráficas en una máquina remota y enviar solamente el despliegue de esas aplicaciones a su dispositivo local. Este paquete contiene un cliente, el cual le permitirá conectarse a otros escritorios que estén ejecutando un servidor VNC. VNC es independiente de plataforma y admite varios sistemas operativos y arquitecturas como servidores así como clientes.</p>
+    <p xml:lang="fi">Virtual Network Computing (VNC) on etänäyttöjärjestelmä, jonka avulla voi katsella ja ohjata toisessa verkon koneessa toimivaa virtuaalista työpöytäympäristöä. VNC:n avulla voi suorittaa graafisia sovelluksia etäkoneella ja lähettää näistä sovelluksista vain näytön paikalliseen laitteeseen. Tämä paketti sisältää asiakasohjelman, jolla voi muodostaa yhteyden muihin työpöytiin, joilla on VNC-palvelin. VNC on alustariippumaton ja tukee erilaisia käyttöjärjestelmiä ja arkkitehtuureja sekä palvelimina että asiakasohjelmina.</p>
+    <p xml:lang="fur">Virtual Network Computing (VNC) al è un sisteme par visualizâ di lontan che ti permet di viodi e interagjî cuntun ambient di scritori virtuâl che al zire suntun altri computer in rêt. Doprant VNC tu puedis eseguî aplicazions grafichis suntune machine lontane e inviâ dome la visualizazion di chestis aplicazions al to dispositîf locâl. Chest pachet al conten un client che ti permetarà di fâti coneti a un altri scritori che al eseguìs un servidôr VNC. VNC al è indipendent des plateformis e al supuarte varis sistemis operatîfs e architeturis, sedi come servidôrs che come clients.</p>
+    <p xml:lang="he">מחשוב רשת וירטואלי (VNC) היא מערכת תצוגה מרחוק שמאפשרת לצפות ולתפעל סביבת שולחן עבודה וירטואלית שרצה על גבי מחשב אחר ברשת. באמצעות VNC אפשר להריץ יישומים גרפיים על מכונה מרוחקת ולשלוח רק את התצוגה מהיישומים האלה למכשיר המקומי שלך. החבילה הזאת מכילה לקוח שיאפשר לך להתחבר לשולחנות עבודה אחרים שמריצים שרת VNC. ל־VNC אין תלות במערכת הפעלה כזאת או אחרת והיא תומכת במגוון מערכות הפעלה וסוגי מעבדים הן מצד השרת והן מצד הלקוח.</p>
+    <p xml:lang="id">Virtual Network Computing (VNC) adalah sistem tampilan jarak jauh yang memungkinkan Anda untuk melihat dan berinteraksi dengan lingkungan desktop virtual yang berjalan di komputer lain di jaringan. Menggunakan VNC, Anda dapat menjalankan aplikasi grafis pada mesin jarak jauh dan hanya mengirim tampilan dari aplikasi ini ke perangkat lokal Anda. Paket ini berisi klien yang akan memungkinkan Anda untuk terhubung ke desktop lain yang menjalankan server VNC. VNC adalah platform-independen dan mendukung berbagai sistem operasi dan arsitektur sebagai server dan klien.</p>
+    <p xml:lang="ro">Calculatoare în Rețea Virtuală ⟶ (Virtual Network Computing) «VNC» este un sistem de afișare la distanță care vă permite să vizualizați și să interacționați cu un mediu de birou virtual care rulează pe un alt computer din rețea. Folosind VNC, puteți rula aplicații grafice pe o mașină de la distanță și puteți trimite numai afișarea din aceste aplicații pe dispozitivul local. Acest pachet conține un client care vă va permite să vă conectați la alte calculatoare care rulează un server VNC. VNC este independent de platformă și acceptă diverse sisteme de operare și arhitecturi atât ca servere, cât și ca clienți.</p>
+    <p xml:lang="ru">Virtual Network Computing (VNC) — система удалённого рабочего стола, которая позволяет просматривать и взаимодействовать по сети с виртуальным окружением, запущенном на другом компьютере.С помощью VNC вы можете запускать графические приложения на удалённой машине и получать отображение этих приложений на локальной машине. Этот пакет содержит клиентскую часть, которая позволяет подключиться к другим рабочим столам, запущенным сервером VNC. VNC не зависит от платформы и поддерживает различные операционные системы и архитектуры как для серверов так и для клиентов.</p>
+    <p xml:lang="sv">Virtual Network Computing (VNC) är ett system för fjärrskrivbord som gör att man kan se och interagera med en virtuell skrivbordsmiljö som kör på en annan dator i nätverket. Genom att använda VNC kan man köra grafiska program på en fjärrmaskin och skicka bara det som visas från dessa program till den lokala enheten. Detta paket innehåller en klient vilken kommer göra det möjligt att ansluta till andra skrivbord som kör en VNC-server. VNC är plattformsoberoende och stödjer olika operativsystem och arkitekturer både som servrar och klienter.</p>
+    <p xml:lang="uk">Віртуальна мережева взаємодія комп'ютерів (Virtual Network Computing або VNC) є системою віддаленої стільниці, за допомогою якої ви можете переглядати та взаємодіяти із віртуальним стільничним середовищем, яке запущено на іншому комп'ютері у мережі. За допомогою VNC ви можете запускати програми із графічним інтерфейсом на віддаленому комп'ютері і отримувати лише зображення з цих програм на вашому локальному пристрої. У цьому пакунку міститься клієнтська частина, за допомогою якої ви можете з'єднуватися з іншими стільничними середовищами, де запущено сервер VNC. Протокол VNC є незалежним від платформи, у ньому передбачено підтримку різних операційних систем та апаратних архітектур, як на сервері, так і на клієнті.</p>
+    <p xml:lang="zh_TW">Virtual Network Computing (VNC) 是個遠端顯示系統，讓您能檢視網路上其他電腦的虛擬桌面環境並與之互動。您可以使用 VNC 來執行圖形化的應用程式，並只回傳這些應用程式的顯示畫面到您的本地裝置。本套件包含 VNC 用戶端，讓您可以連線到其他執行著 VNC 伺服器的桌面。VNC 不受平台侷限，無論是伺服器還是用戶端，都支援各種作業系統和架構。</p>
+    <p>TigerVNC is a high-speed version of VNC based on the RealVNC 4 and X.org code bases. TigerVNC started as a next-generation development effort for TightVNC on Unix and Linux platforms, but it split from its parent project in early 2009 so that TightVNC could focus on Windows platforms. TigerVNC supports a variant of Tight encoding that is greatly accelerated by the use of the libjpeg-turbo JPEG codec.</p>
+    <p xml:lang="bg">TigerVNC е високоскоростна версия на VNC, която произлиза от RealVNC 4 и X.org. TigerVNC се появява като версия на TightVNC за разработчици под Unix и Linux, но се отделя от родителския проект още през 2009, за да може проектът TightVNC да се концентрира върху Windows. TigerVNC поддържа вариант на кодирането Tight, което е ускорено чрез ползването на кодера за JPEG „libjpeg-turbo“.</p>
+    <p xml:lang="cs">TigerVNC je vysokorychlostní verze VNC založená na kódu RealVNC 4 a X.org. TigerVNC začalo jako úsilí o vývoj nové generace TightVNC pro Unix a Linux, ale na počátku roku 2009 se oddělilo od rodičovského projektu, aby se TightVNC mohlo soustředit na platformu Windows. TigerVNC podporuje variantu kódování Tight, která je značně urychlena použitím libjpeg-turbo, kodéru a dekodéru formátu JPEG.</p>
+    <p xml:lang="de">TigerVNC ist eine Hochgeschwindigkeitsversion von VNC, basierend auf den Codebasen von RealVNC 4 und X.org. TigerVNC begann als Weiterentwicklung von TightVNC auf Unix- und Linux-Plattformen und trennte sich Anfang 2009 von seinem Vorgängerprojekt, so dass sich TightVNC auf Windows-Plattformen konzentrieren konnte. TigerVNC unterstützt eine Variante von Tight Encoding, das durch die Verwendung des JPEG-Codecs »libjpeg-turbo« erheblich beschleunigt wird.</p>
+    <p xml:lang="es">TigerVNC es una versión de alta velocidad de VNC basada en las bases de código de RealVNC 4 y X.org. TigerVNC empezó como un esfuerzo de desarrollo de próxima generación para TightVNC en plataformas Unix y Linux, pero se separó de su proyecto padre a inicios del 2009 para que TightVNC se enfocara en plataformas Windows. TigerVNC admite una variante de la codificación Tight que tiene una gran aceleración por el uso del codificador JPEG de libjpeg-turbo.</p>
+    <p xml:lang="fi">TigerVNC on RealVNC 4- ja X.org koodikantoihin perustuva nopea versio VNC:stä. TigerVNC aloitettiin uuteen sukupolveen tähtäävänä TightVNC:n kehitystyönä Unix- ja Linux-alustoilla, mutta se erosi emoprojektistaan vuoden 2009 alussa, jotta TightVNC voisi keskittyä Windows-alustoihin. TigerVNC tukee Tight-koodauksen muunnosta, jota libjpeg-turbo-JPEG-koodekin käyttö nopeuttaa huomattavasti.</p>
+    <p xml:lang="fur">TigerVNC e je une version a alte velocitât di VNC, basade su RealVNC 4 e lis basis dal codiç di X.org. TigerVNC al è scomençât tant che tentatîf di svilup de prossime gjenerazion di TightVNC pes plateformis Unix e Linux, ma si è separât dal so progjet gjenitôr sul scomençâ dal 2009. In cheste maniere TightVNC al à podût concentrâsi su lis plateformis Windows. TigerVNC al supuarte une variante de codifiche Tight che e je une vore acelerade dal ûs dal codificadôr JPEG llibjpeg-turbo.</p>
+    <p xml:lang="he">שTigerVNC היא גרסה מהירה של VNC שמבוססת ביסודה על קוד המקור של RealVNC ושל X.Org. מיזם TigerVNC החל כמאמץ פיתוח לדור הבא של TightVNC לפלטפורמות יוניקס ולינוקס אך הוא פוצל ממיזם ההורה שלו בתחילת 2009 כדי לאפשר ל־TightVNC להתמקד בתמיכה ב־Windows. ב־TigerVNC יש תמיכה במגוון של הצפנות Tight שמואצות על ידי השימוש במפענח JPEG בשם libjpeg-turbo.</p>
+    <p xml:lang="id">TigerVNC adalah versi VNC berkecepatan tinggi berdasarkan basis kode RealVNC 4 dan X.org. TigerVNC dimulai sebagai upaya pengembangan generasi berikutnya untuk TightVNC pada platform Unix dan Linux, tetapi terpisah dari proyek induknya pada awal 2009 sehingga TightVNC dapat fokus pada platform Windows. TigerVNC mendukung varian Pengodean ketat yang sangat dipercepat dengan penggunaan kodek JPEG libjpeg-turbo.</p>
+    <p xml:lang="ro">TigerVNC este o versiune de mare viteză a VNC bazată pe bazele codurilor RealVNC 4 și X.org. TigerVNC a început ca un efort de dezvoltare de ultimă generație pentru TightVNC pe platformele Unix și Linux, dar s-a despărțit de proiectul său părinte la începutul anului 2009, astfel încât TightVNC să se poată concentra pe platformele Windows. TigerVNC acceptă o variantă de codificare Tight care este mult accelerată prin utilizarea codec-ului JPEG libjpeg-turbo.</p>
+    <p xml:lang="ru">TigerVNC — высокоскоростная версия VNC, в основе лежит код RealVNC 4 и X.org. TigerVNC начиналась как разработка следующего поколения TightVNC для платформ Unix и Linux, но отделилась от родительского проекта в начале 2009 года для того, чтобы TightVNC смогла сфокусироваться на платформе Windows. TigerVNC поддерживает вариант кодирования Tight, который был значительно ускорен с помощью кодека libjpeg-turbo JPEG.</p>
+    <p xml:lang="sv">TigerVNC är en höghastighetsversion av VNC baserat på kodbaserna RealVNC 4 och X.org. TigerVNC startades som ett arbete att utveckla nästa generation av TightVNC på Unix- och Linuxplattformar, men delades av från sitt föräldraprojekt i början av 2009 så att TightVNC kunde fokusera på plattformen Windows. TigerVNC stödjer en variant av Tight-kodning som är kraftigt accelererad genom användning av JPEG-omkodaren från libjpeg-turbo.</p>
+    <p xml:lang="uk">TigerVNC — високошвидкісна версія VNC на основі програмного коду RealVNC 4 та X.org. Роботу над TigerVNC було розпочато у межах побудови наступного покоління для TightVNC на платформах Unix та Linux, але програма відокремилася від батьківського проєкту на початку 2009 року, коли проєкт TightVNC зосередився на платформах Windows. У TigerVNC передбачено підтримку варіанта кодування Tight, який значно пришвидшено використанням кодека JPEG libjpeg-turbo.</p>
+    <p xml:lang="zh_TW">TigerVNC 是以 RealVNC 4 和 X.org 程式碼為基礎打造的 VNC 高速版本。TigerVNC 原先是 TightVNC 在 Unix 和 Linux 平台上的下一代開發成果，但在 2009 年初從原本的專案中分離，讓 TigerVNC 得以專注在 Windows 平台上。TigerVNC 支援 Tight 編碼的變體版本，透過 libjpeg-turbo JPEG 編解碼器，使其速度獲得相當大的提升。</p>
+  </description>
+
+  <launchable type="desktop-id">vncviewer.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>TigerVNC Viewer connection to a CentOS machine</caption>
+      <caption xml:lang="bg">Визуализатор на TigerVNC: връзка към CentOS</caption>
+      <caption xml:lang="cs">Spojení prohlížeče TigerVNC ke stroji s CentOS</caption>
+      <caption xml:lang="de">TigerVNC-Betrachter-Verbindung zu einem CentOS-Rechner</caption>
+      <caption xml:lang="es">Conexión de Visor TigerVNC a una máquina CentOS</caption>
+      <caption xml:lang="fi">TigerVNC-katselimen yhteys CentOS-koneeseen</caption>
+      <caption xml:lang="fur">Conession di Visualizadôr TigerVNC a une machine CentOS</caption>
+      <caption xml:lang="he">התחברות מציג VNC למכונת CentOS</caption>
+      <caption xml:lang="id">Koneksi Penampil TigerVNC ke mesin CentOS</caption>
+      <caption xml:lang="ro">Conexiune a vizualizatorului TigerVNC la o mașină «GNU/Linux»</caption>
+      <caption xml:lang="ru">Подключение TigerVNC Viewer к машине CentOS</caption>
+      <caption xml:lang="sv">TigerVNC-visares anslutning till en CentOS-maskin</caption>
+      <caption xml:lang="uk">З'єднання Переглядача TigerVNC зі комп'ютером, де працює CentOS</caption>
+      <caption xml:lang="zh_TW">連線至 CentOS 機器的 TigerVNC 檢視器</caption>
+      <image>https://raw.githubusercontent.com/TigerVNC/tigervnc/741d3edbfab65eda6f033078bc06347fe244ea6a/vncviewer/metainfo/tigervnc-connection-linux.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>TigerVNC Viewer connection to a macOS machine</caption>
+      <caption xml:lang="bg">Визуализатор на TigerVNC: връзка към MacOS</caption>
+      <caption xml:lang="cs">Spojení prohlížeče TigerVNC ke stroji s macOS</caption>
+      <caption xml:lang="de">TigerVNC-Betrachter-Verbindung zu einem macOS-Rechner</caption>
+      <caption xml:lang="es">Conexión de Visor TigerVNC a una máquina macOS</caption>
+      <caption xml:lang="fi">TigerVNC-katselimen yhteys macOS-koneeseen</caption>
+      <caption xml:lang="fur">Conession di Visualizadôr TigerVNC a une machine macOS</caption>
+      <caption xml:lang="he">התחברות מציג VNC למכונת macOS</caption>
+      <caption xml:lang="id">Koneksi Penampil TigerVNC ke mesin macOS</caption>
+      <caption xml:lang="ro">Conexiune a vizualizatorului TigerVNC la o mașină «macOS»</caption>
+      <caption xml:lang="ru">Подключение TigerVNC Viewer к машине macOS</caption>
+      <caption xml:lang="sv">TigerVNC-visares anslutning till en macOS-maskin</caption>
+      <caption xml:lang="uk">З'єднання Переглядача TigerVNC із комп'ютером, де працює macOS</caption>
+      <caption xml:lang="zh_TW">連線至 macOS 機器的 TigerVNC 檢視器</caption>
+      <image>https://raw.githubusercontent.com/TigerVNC/tigervnc/741d3edbfab65eda6f033078bc06347fe244ea6a/vncviewer/metainfo/tigervnc-connection-macos.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>TigerVNC Viewer connection to a Windows machine</caption>
+      <caption xml:lang="bg">Визуализатор на TigerVNC: връзка към Windows</caption>
+      <caption xml:lang="cs">Spojení prohlížeče TigerVNC ke stroji s Windows</caption>
+      <caption xml:lang="de">TigerVNC-Betrachter-Verbindung zu einem Windows-Rechner</caption>
+      <caption xml:lang="es">Conexión de Visor TigerVNC a una máquina Windows</caption>
+      <caption xml:lang="fi">TigerVNC-katselimen yhteys Windows-koneeseen</caption>
+      <caption xml:lang="fur">Conession di Visualizadôr TigerVNC a une machine Windows</caption>
+      <caption xml:lang="he">חיבור מציג VNC למכונת Windows</caption>
+      <caption xml:lang="id">Koneksi Penampil TigerVNC ke mesin Windows</caption>
+      <caption xml:lang="ro">Conexiune a vizualizatorului TigerVNC la o mașină «Windows»</caption>
+      <caption xml:lang="ru">Подключение TigerVNC Viewer к машине Windows</caption>
+      <caption xml:lang="sv">TigerVNC-visares anslutning till en Windows-maskin</caption>
+      <caption xml:lang="uk">З'єднання Переглядача TigerVNC із комп'ютером, де працює Windows</caption>
+      <caption xml:lang="zh_TW">連線至 Windows 機器的 TigerVNC 檢視器</caption>
+      <image>https://raw.githubusercontent.com/TigerVNC/tigervnc/741d3edbfab65eda6f033078bc06347fe244ea6a/vncviewer/metainfo/tigervnc-connection-windows.jpg</image>
+    </screenshot>
+  </screenshots>
+</component>
