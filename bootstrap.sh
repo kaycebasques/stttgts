@@ -1,3 +1,6 @@
+sudo apt install -y sox  # audio recording command (`rec`)
+sudo apt install -y speech-dispatcher  # text-to-speech command (`spd-say`)
+
 cd tools/lg
 make
 sudo make install
