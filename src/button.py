@@ -31,7 +31,10 @@ def speech_to_text():
     )
     audio = speech.RecognitionAudio(content=content)
     response = client.recognize(config=config, audio=audio)
-    return response.results.alternatives[0].transcript
+    transcript = ''
+    for result in response.results:
+        transcript += result.alternatives[0].transcript
+    return transcript
     # print(response)
     # best_response = response.alternatives[0]
     # print(best_response)
