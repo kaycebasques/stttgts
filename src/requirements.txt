@@ -1,3 +1,5 @@
 gpiozero==2.0
 RPi.GPIO==0.7.1
 google-cloud-speech==2.24.1
+google-generativeai==0.3.2                                                                          
+python-dotenv==1.0.1

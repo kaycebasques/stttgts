@@ -1,9 +1,17 @@
+import os
 import subprocess
 import threading
 import time
 
+import dotenv
 import gpiozero
 from google.cloud import speech
+import google.generativeai as gemini
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/bookworm/service-account.json'
+env = dotenv.dotenv_values('.env')
+gemini.configure(api_key=env['GEMINI_API_KEY'])
+model = gemini.GenerativeModel('gemini-pro')
 
 # https://projects.raspberrypi.org/en/projects/physical-computing/5
 button = gpiozero.Button(2)
@@ -17,17 +25,20 @@ def speech_to_text():
         content = f.read()
     config = speech.RecognitionConfig(
         language_code='en',
-        encoding=speech.RecognitionConfig.AudioEncoding.LINEAR,
-        sample_rate_hertz=32000
+        encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
+        sample_rate_hertz=48000,
+        audio_channel_count=2
     )
     audio = speech.RecognitionAudio(content=content)
     response = client.recognize(config=config, audio=audio)
-    best_response = response.alternatives[0]
-    print(best_response)
+    return response.alternatives.transcript
+    # print(response)
+    # best_response = response.alternatives[0]
+    # print(best_response)
 
 def record():
     # start the audio recording
-    process = subprocess.Popen(['rec', audio_file, 'rate', '32k'])
+    process = subprocess.Popen(['rec', audio_file, 'rate', '48k'])
     # https://unix.stackexchange.com/a/57593/79351
     while not stop.is_set():
         # wait for it to end...
@@ -44,4 +55,6 @@ while True:
     thread.join()
     time.sleep(1)
     subprocess.run(['play', '-v', '3.0', audio_file])
-    speech_to_text()
+    text = speech_to_text()
+    response = model.generate_content(text)
+    print(response.text)
